@@ -11,19 +11,17 @@ namespace WcfHabrService
     public class Service1 : IHabrService
     {
        
-        public string GetHabrArticleById(int habrArticleId)
+        public HabrArticle GetHabrArticleById(int habrArticleId)
         {
 
-            var habrArticle = HabrArticleController.GetDataById(habrArticleId);
+            return HabrArticleController.GetDataById(habrArticleId);
 
-            return HabrArticleController.GetOutputDataString(habrArticle);
         }
 
-        public string GetHabrArticleByKeyword(string keyword)
+        public HabrArticle GetHabrArticleByKeyword(string keyword)
         {
-            var habrArticle = HabrArticleController.FindArticleByKeyword(keyword);
+            return HabrArticleController.FindArticleByKeyword(keyword);
 
-            return HabrArticleController.GetOutputDataString(habrArticle);
         }
 
     }

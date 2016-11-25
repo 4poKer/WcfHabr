@@ -14,10 +14,10 @@ namespace WcfHabrService
     {
 
         [OperationContract]
-        string GetHabrArticleById(int habrArticleId);
+        HabrArticle GetHabrArticleById(int habrArticleId);
 
         [OperationContract]
-        string GetHabrArticleByKeyword(string keyword);
+        HabrArticle GetHabrArticleByKeyword(string keyword);
     }
 
 
